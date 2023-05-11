@@ -1,0 +1,254 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a { 
+    text-decoration: none;
+    color: black; 
+}
+
+*::after,
+*::before,
+*{ 
+    box-sizing: border-box;
+}
+
+:root {  
+    --hello: red; 
+    /* it is okay to use the same values for two different variables*/
+
+    
+
+}
+
+/*                                   CSS reset                                   */ 
+
+
+
+body { 
+    font-size: 1.2rem; 
+    
+} 
+
+
+
+
+.toggle { 
+    display: none;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 100px; 
+    box-shadow: 0px 2px 2px rebeccapurple;
+
+}
+
+#logo { 
+    flex: 0 0 10%; 
+}
+
+#logo img { 
+    width: 180px; 
+    margin-left: -20px;
+
+}
+
+.search-container, .rightside, #cart { 
+    margin-top: -26px; 
+}
+
+.search-container { 
+    display: flex;
+    align-items: center;
+    flex: 1 1 20%; 
+    justify-content: space-between;
+    border: 1px solid black; 
+    height: 32px; 
+    margin-right:15px; 
+}
+
+#searchicon { 
+    min-width: 41px;
+    height: 100%;
+    background-color: red ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.search-container input { 
+    width: 90%; 
+    min-width: 150px;
+    height: 30px; 
+    border: none; 
+    padding-left: 10px;
+}
+
+.rightside { 
+    flex: 0 0 50%; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px; 
+    padding-right:20px; 
+   
+}
+
+.rightside ul { 
+    flex: 0 1 0; 
+    display: flex;
+    gap: 2rem ;
+    white-space: nowrap; 
+    text-align: center; 
+    
+}
+
+.nav-link { 
+    font-weight: 400;
+}
+
+.rightside ul > li:hover {
+    box-shadow: 0 2px 0 green;
+    transition-property: box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+}
+
+
+
+
+#login {
+    background: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+#cart { 
+    background:none; 
+    border: none; 
+    font-size: 1.5rem; 
+    margin-right: 20px; 
+    margin-left: 10px; 
+}
+
+#cart:hover { 
+    background-color: green;
+}
+
+
+
+@media only screen and (max-width: 770px) {
+    .toggle{ 
+        display: block;
+        margin-top: -29px; 
+       /*  margin-left: 10px; */
+    }
+
+    header {
+        width: 100vw;
+        flex-wrap: nowrap;
+        width: 100vw;
+    }
+    
+
+    .show-toggle { 
+        background-color: white;
+        border: none; 
+    }
+
+    .show-toggle i { 
+        font-size: 1.5rem; 
+    }
+
+    .rightside { 
+        display:none; 
+    }
+
+    .rightside.toggleactive { 
+        flex-direction: column;
+        justify-content: start;
+      
+        position: fixed; 
+        inset: 0 70% 0 0; 
+        width: 250px;
+        height:100vh; 
+        background-color: aqua;
+        padding-top:100px; 
+    }
+
+    .rightside ul { 
+        order: 1;
+        flex-direction:column; 
+        margin-left: 10px; 
+    }
+
+    #login { 
+        width:220px; 
+        height:40px; 
+        display: block;
+        position: absolute;
+        
+    }
+
+    
+
+
+    .search-container { 
+        position: absolute;
+        top: 125px; 
+        display: flex ;
+        width: 100vw; 
+
+    }
+
+    
+  }
+
+
